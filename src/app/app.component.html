@@ -1,0 +1,46 @@
+<body>
+  <header>
+		<div class="top-head left">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<h1>News Hub<small>Get the latest News</small></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="top-nav">
+		<nav class="navbar navbar-expand-lg py-0">
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="exCollapsingNavbar2">
+					<ul class="nav navbar-nav ">
+						<li class="nav-item active"> <a class="nav-link" routerLink="">Home</a></li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'world']" (click)="searchArticles('world')">World</a> </li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'politics']" (click)="searchArticles('politics')">Politics</a> </li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'business']" (click)="searchArticles('business')">Business</a> </li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'science']" (click)="searchArticles('science')">Science</a> </li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'sports']" (click)="searchArticles('sports')">Sports</a> </li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'tech']" (click)="searchArticles('tech')">Tech</a> </li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'travel']" (click)="searchArticles('travel')">Travel</a> </li>
+						<li class="nav-item"> <a class="nav-link" [routerLink]="['/news', 'helth']" (click)="searchArticles('helth')">Health</a> </li>
+					</ul>
+					<form class="ml-auto">
+						<div class="search">
+							<input type="text" class="form-control" maxlength="64"/>
+							<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<router-outlet></router-outlet>
+
+</body>

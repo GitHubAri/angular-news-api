@@ -1,0 +1,20 @@
+	<!-- Data fetch from API -->
+	<section class="banner-sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3" *ngFor="let article of mArticles">
+					<div class="card"> <img class="img-fluid"
+							src="{{ article.urlToImage }}" alt="">
+						<div class="card-img-overlay"> <span class="badge badge-pill badge-danger">{{ article.source.name }}</span> </div>
+						<div class="card-body">
+							<div class="news-title">
+								<h2 class=" title-small"><a href="{{ article.url }}" target="_blank">{{article.title}}</a>
+								</h2>
+							</div>
+							<p class="card-text"><small class="text-time"><em>{{ article.publishedAt | date:'fullDate'}}</em></small></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
